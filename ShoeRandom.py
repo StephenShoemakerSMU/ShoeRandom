@@ -28,7 +28,7 @@ class ShoeRandomInPlace:
         
         seed = hashlib.sha256()
         
-            
+        seed.update(self.seed.to_bytes(24,'big'))    
         seed.update(num.to_bytes(24,'big'))
             
             
